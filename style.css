@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    border: 0;
+    background-color: #fafafa;
+    color: #393536;
+}
+h1 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 1.7rem;
+}
+h4 {
+    font-size: 1.3rem;
+}
+
+@font-face {
+font-family: 'Clash-Display';
+src: url(ClashDisplay-Semibold.otf);
+}
+@font-face {
+font-family: 'Cabinet';
+src: url(CabinetGrotesk-Regular.otf);
+}
+@font-face {
+font-family: 'Cabinet-Bold';
+src: url(CabinetGrotesk-Bold.otf);
+}
+
+header {
+    position: sticky;
+    padding: 0 15%;
+    top: 0;
+    font-family: 'Cabinet-Bold';
+    background-color: #fafafa;
+    color: #393536;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+}
+a {
+    text-decoration: none;
+    color: #393536;
+}
+a:visited {
+    color: #393536;
+}
+.nav-logo {
+    display: flex;
+    gap: 1rem;
+}
+.logo-img {
+    height: 3rem;
+    position: relative;
+    top: 1.4rem;
+}
+.logo-text {
+    font-size: 1.8rem;
+}
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+.landing-container {
+    margin: 5rem 25% 0 25%;
+    font-family: 'Cabinet';
+    height: 95vh;
+    animation-delay: 0.5s;
+    animation: pop, ease-in-out;
+}
+.svg-laptop {
+    height: 45rem;
+    margin-left: 30%;
+}
+.svg-website {
+    position: relative;
+    z-index: 2;
+    top: -37rem;
+    left: 5rem;
+    height: 15rem;
+}
+.svg-app {
+    position: relative;
+    z-index: 2;
+    top: -37rem;
+    left: 2rem;
+    height: 15rem;
+}
+.bio-container {
+    background-color: #0085ff;
+    color: #fafafa;
+    height: 60vh;
+    padding: 5rem 25% 0 25%;
+    font-family: 'Cabinet';
+    font-size: 2rem;
+}
+.skills-container {
+    font-family: 'Cabinet';
+    padding: 5rem 25% 0 25%;
+    margin-bottom: 5rem;
+}
+.skills-group {
+    display: flex;
+    justify-content: space-around;
+}
+.skills-each {
+/*     background-color: #002950; */
+    background-image: -moz-linear-gradient(#003669, #00274b);
+    color: #fafafa;
+    border-radius: .3rem;
+    width: 13vw;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.skills-each i {
+    font-size: 2.5rem;
+}
+.skills-each div p {
+    margin-top: 0;
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
