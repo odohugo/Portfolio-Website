@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hugo Januario</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
@@ -15,14 +15,14 @@
                 <p class="logo-text">Hugo Januário</p>
             </a>
             <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="/projects">Projects</a>
-                <a href="/contact">Contact</a>
+                <a class="home-scroll">Home</a>
+                <a class="work-scroll">Work</a>
+                <a class="contact-scroll">Contact</a>
             </div>
         </nav>
     </header>
 
-    <div class="landing-container">
+    <div class="landing-container pop-in-animation">
         <h1>Hi &#128075 I am Hugo Januário </h1>
         <h3>A Full-stack Developer based in Szczecin, Poland.</h3>
         <img src="./images/laptop.svg" class="svg-laptop">
@@ -30,7 +30,7 @@
         <img src="./images/app.svg" class="svg-app">
     </div>
 
-    <div class="bio-container">
+    <div class="bio-container pop-in-animation">
         <p>I'm an enthusiastic and adaptable Full-stack Web Developer who's passionate 
             about building incredible websites and web applications. 
             I've been on a journey of coding, creating, and continuously improving digital 
@@ -40,68 +40,120 @@
             and results-driven digital experiences. Get in touch, and let's bring your vision to life!</p>
     </div>
 
-    <div class="skills-container">
-        <h3>My Skills:</h3>
+    <div class="skills-container pop-in-animation">
+        <h2>My Skills</h2>
         <div class="skills-group">
             <div class="skills-each">
                 <h4>Languages</h4>
                 <div>
-                    <i class="devicon-html5-plain colored"></i>
-                    <p>HTML</p>
-                </div>
-                <div>
-                    <i class="devicon-css3-plain colored"></i>
-                    <p>CSS</p>
-                </div>
-                <div>
-                    <i class="devicon-javascript-plain colored"></i>
-                    <p>JAVASCRIPT</p>
-                </div>
-                <div>
-                    <i class="devicon-python-plain colored"></i>
-                    <p>PYTHON</p>
+                    <div>
+                        <i class="devicon-html5-plain colored"></i>
+                        <p>HTML</p>
+                    </div>
+                    <div>
+                        <i class="devicon-css3-plain colored"></i>
+                        <p>CSS</p>
+                    </div>
+                    <div>
+                        <i class="devicon-javascript-plain colored"></i>
+                        <p>JAVASCRIPT</p>
+                    </div>
+                    <div>
+                        <i class="devicon-python-plain colored"></i>
+                        <p>PYTHON</p>
+                    </div>
                 </div>
             </div>
             <div class="skills-each">
                     <h4>Frameworks</h4>
                     <div>
-                        <i class="devicon-nodejs-plain colored"></i>
-                        <p>NODE JS</p>
-                    </div>
-                    <div>
-                        <i class="devicon-react-plain colored"></i>
-                        <p>REACT</p>
-                    </div>
-                    <div>
-                        <i class="devicon-jest-plain colored"></i>
-                        <p>JEST</p>
-                    </div>
-                    <div>
-                        <i class="devicon-bootstrap-plain"></i>
-                        <p>BOOTSTRAP</p>
+                        <div>
+                            <i class="devicon-nodejs-plain colored"></i>
+                            <p>NODE JS</p>
+                        </div>
+                        <div>
+                            <i class="devicon-react-plain colored"></i>
+                            <p>REACT</p>
+                        </div>
+                        <div>
+                            <i class="devicon-jest-plain colored"></i>
+                            <p>JEST</p>
+                        </div>
+                        <div>
+                            <i class="devicon-bootstrap-plain"></i>
+                            <p>BOOTSTRAP</p>
+                        </div>
                     </div>
                 </div>
             <div class="skills-each">
                     <h4>Miscellaneous</h4>
                     <div>
-                        <i class="devicon-github-plain"></i>
-                        <p>GITHUB</p>
+                        <div>
+                            <i class="devicon-github-plain"></i>
+                            <p>GITHUB</p>
+                        </div>
+                        <div>
+                            <i class="devicon-firebase-plain colored"></i>
+                            <p>FIREBASE</p>
+                        </div>
+                        <div>
+                            <i class="devicon-webpack-plain colored"></i>
+                            <p>WEBPACK</p>
+                        </div>
+                        <div>
+                            <i class="devicon-figma-plain colored"></i>
+                            <p>FIGMA</p>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <div class="works-container">
+                <h2>Client Work</h2>
+                <h4>Explore some of the projects I've had the privilege to work on.</h4>
+
+                <div class="works-each">
+                    <div class="lech-website-img"></div>
                     <div>
-                        <i class="devicon-firebase-plain colored"></i>
-                        <p>FIREBASE</p>
+                        <h4>Contemporary Artist's Website</h4>
+                        <p>Portfolio displaying Agata Lech's work as multidisciplinary artist.</p>
+                        <a href="http://agatalech.com/" target="_blank" rel="noopener noreferrer"><button class="visit-work-project">Visit</button></a>
                     </div>
-                    <div>
-                        <i class="devicon-webpack-plain colored"></i>
-                        <p>WEBPACK</p>
-                    </div>
-                    <div>
-                        <i class="devicon-figma-plain colored"></i>
-                        <p>FIGMA</p>
-                    </div>
+                </div>
+            </div>
+            <div class="contact-container">
+                <h2>Contact</h2>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/hugo-janu%C3%A1rio-a194b318a/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain colored"></i><p>LinkedIn</p></a>
+                    <a href="https://github.com/odohugo" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original colored"></i><p>GitHub</p></a>
+                    <img src="./mail.svg"/><p>odohugo@gmail.com</p>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        const homeBtn = document.querySelector(".home-scroll");
+        const workBtn = document.querySelector(".work-scroll");
+        const contactBtn = document.querySelector(".contact-scroll");
+
+        const workDiv = document.querySelector(".works-container");
+        const contactDiv = document.querySelector(".contact-container");
+
+
+        homeBtn.addEventListener('click', () => {
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        })
+
+        workBtn.addEventListener('click', () => {
+            workDiv.scrollIntoView({behavior: "smooth"})
+        })
+
+        contactBtn.addEventListener('click', () => {
+            contactDiv.scrollIntoView({behavior: "smooth"})
+        })
+    </script>
 </body>
 </html>

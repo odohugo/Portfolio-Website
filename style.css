@@ -7,16 +7,14 @@ body {
 h1 {
     font-size: 4rem;
 }
+h2 {
+    font-size: 2.7rem;
+}
 h3 {
     font-size: 1.7rem;
 }
 h4 {
     font-size: 1.3rem;
-}
-
-@font-face {
-font-family: 'Clash-Display';
-src: url(ClashDisplay-Semibold.otf);
 }
 @font-face {
 font-family: 'Cabinet';
@@ -26,14 +24,15 @@ src: url(CabinetGrotesk-Regular.otf);
 font-family: 'Cabinet-Bold';
 src: url(CabinetGrotesk-Bold.otf);
 }
-
 header {
     position: sticky;
-    padding: 0 15%;
+    padding: .7rem 15% .7rem 15%;
     top: 0;
-    font-family: 'Cabinet-Bold';
+    font-family: 'Cabinet-Bold', sans-serif;
     background-color: #fafafa;
     color: #393536;
+    z-index: 10;
+    box-shadow: 2px 0px 5px rgb(207, 207, 207);
 }
 nav {
     display: flex;
@@ -43,6 +42,7 @@ nav {
 }
 a {
     text-decoration: none;
+    font-weight: 600;
     color: #393536;
 }
 a:visited {
@@ -50,67 +50,74 @@ a:visited {
 }
 .nav-logo {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 .logo-img {
     height: 3rem;
     position: relative;
-    top: 1.4rem;
 }
 .logo-text {
     font-size: 1.8rem;
+    margin: 0;
 }
 .nav-links {
     display: flex;
     gap: 1rem;
 }
+.nav-links a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 .landing-container {
     margin: 5rem 25% 0 25%;
-    font-family: 'Cabinet';
+    font-family: 'Cabinet', sans-serif;
     height: 95vh;
-    animation-delay: 0.5s;
-    animation: pop, ease-in-out;
 }
 .svg-laptop {
-    height: 45rem;
-    margin-left: 30%;
+    height: 35rem;
+    margin-top: 3rem;
+    margin-left: 15vw;
 }
 .svg-website {
     position: relative;
     z-index: 2;
-    top: -37rem;
-    left: 5rem;
-    height: 15rem;
+    bottom: 30rem;
+    left: 3vw;
+    height: 12rem;
 }
 .svg-app {
     position: relative;
     z-index: 2;
-    top: -37rem;
-    left: 2rem;
-    height: 15rem;
+    bottom: 35rem;
+    left: 4vw;
+    height: 13rem;
+}
+.svg-website:hover {
+    animation: wiggle .4s ease-in-out;
+}
+.svg-app:hover {
+    animation: wiggle .4s ease-in-out;
 }
 .bio-container {
     background-color: #0085ff;
     color: #fafafa;
-    height: 60vh;
-    padding: 5rem 25% 0 25%;
-    font-family: 'Cabinet';
+    padding: 5rem 25%;
+    font-family: 'Cabinet', sans-serif;
     font-size: 2rem;
 }
 .skills-container {
-    font-family: 'Cabinet';
+    font-family: 'Cabinet', sans-serif;
     padding: 5rem 25% 0 25%;
-    margin-bottom: 5rem;
 }
 .skills-group {
     display: flex;
     justify-content: space-around;
 }
 .skills-each {
-/*     background-color: #002950; */
-    background-image: -moz-linear-gradient(#003669, #00274b);
+    background-color: #1f3f70;
     color: #fafafa;
-    border-radius: .3rem;
+    border-radius: .5rem;
     width: 13vw;
     padding-bottom: 1rem;
     text-align: center;
@@ -121,14 +128,210 @@ a:visited {
 .skills-each div p {
     margin-top: 0;
 }
+.pop-in-animation {
+    opacity: 0;
+    animation: popin, ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+}
+.works-container {
+    margin-top: 8rem;
+    font-family: 'Cabinet', sans-serif;
+}
+.works-container h4 {
+    margin: 0;
+}
+.works-each {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+}
+.lech-website-img {
+    width: 30rem;
+    height: 21rem;
+    border: 3px solid #0085ff;
+    border-radius: .7rem;
+    background-image: url(/Agata-Lech-Website.png);
+    background-size: contain;
+}
+.visit-work-project {
+    background-color: #0085ff;
+    color: #fafafa;
+    font-family: 'Cabinet', sans-serif;
+    font-size: 1.2rem;
+    border: 0;
+    padding: .6rem 1.6rem;
+    border-radius: .5rem;
+}
+.visit-work-project:hover {
+    background-color: #1f3f70;
+    scale: 1.05;
+    transition: .1s;
+    cursor: pointer;
+}
+.contact-container {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    border-top: 2px solid #92a9cc;
+}
+.contact-container h2 {
+    margin-top: 1rem;
+}
+.contact-links {
+    display: flex;
+    gap: 2rem;
+}
+.contact-links a {
+    display: flex;
+    gap: .5rem;
+}
+.contact-links i {
+    font-size: 3rem;
+}
+.contact-links img {
+    height: 3rem;
+    margin-right: -1.2rem;
+}
+.contact-links p {
+    font-weight: 600;
+}
 
-@keyframes pop {
-    0% {
+@keyframes popin {
+    from {
         opacity: 0;
-        transform: translateX(50%);
+        transform: translateY(5%);
     }
-    100% {
+    to {
         opacity: 1;
-        transform: translateX(0%);
+        transform: translateY(0%);
+    }
+}
+@keyframes wiggle {
+    35% {
+        transform: translateY(-2%);
+    }
+    70% {
+        transform: translateY(2%);
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .svg-laptop {
+        height: 40vw;
+        margin-left: 10rem;
+    }
+    .svg-website {
+        height: 12vw;
+        bottom: 35vw;
+        left: 0;
+    }
+    .svg-app {
+        height: 12vw;
+        bottom: 35vw;
+        left: 0;
+    }
+    .skills-container {
+        padding: 5rem 10% 0 10%;
+    }
+    .skills-each {
+        width: 25vw;
+    }
+}
+@media screen and (max-width:820px) {
+
+    header {
+        height: 5rem;
+    }
+    .logo-img {
+        top: 1rem;
+    }
+    .logo-text {
+        display: none;
+    }
+    .nav-links {
+        margin-top: 2rem;
+    }
+    .landing-container {
+        margin: 5rem 10% 0 10%;
+        height: 70vh;
+    }
+    .svg-laptop {
+        height: 15rem;
+        margin-left: 25vw;
+        margin-top: 7rem;
+    }
+    .svg-website {
+        position: relative;
+        z-index: 2;
+        bottom: 20rem;
+        left: 5rem;
+        height: 8rem;
+    }
+    .svg-app {
+        position: relative;
+        z-index: 2;
+        bottom: 22rem;
+        left: 6rem;
+        height: 9rem;
+    }
+    .skills-container {
+        padding: 0 10%;
+        margin-bottom: 3rem;
+    }
+    .skills-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .skills-each {
+        width: auto;
+        padding: 0 10% 10% 10%;
+    }
+    .skills-each div {
+        display: flex;
+        justify-content: space-around;
+    }
+    .skills-each p {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 0 5%;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    .bio-container {
+        padding: 5rem 10%;
+        font-size: 1.2rem;
+    }
+    .svg-laptop {
+        height: 10rem;
+        margin-left: 25vw;
+        margin-top: 7rem;
+    }
+    .svg-website {
+        position: relative;
+        z-index: 2;
+        bottom: 10rem;
+        left: 2rem;
+        height: 5rem;
+    }
+    .svg-app {
+        position: relative;
+        z-index: 2;
+        bottom: 15rem;
+        left: 4rem;
+        height: 5rem;
     }
 }
