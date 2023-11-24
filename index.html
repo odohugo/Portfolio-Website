@@ -79,7 +79,8 @@
     </div>
 
     <div class="skills-container pop-in-animation">
-        <h2>My Skills</h2>
+        <h2 class="content-en">My Skills</h2>
+        <h2 class="content-pl hidden">Moje Skills</h2>
         <div class="skills-group">
             <div class="skills-each">
                 <h4>Languages</h4>
@@ -167,16 +168,9 @@
                 </div>
             </div>
 
-            <div class="contact-container content-en">
-                <h2>Contact</h2>
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/hugo-janu%C3%A1rio-a194b318a/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain colored"></i><p>LinkedIn</p></a>
-                    <a href="https://github.com/odohugo" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original colored"></i><p>GitHub</p></a>
-                    <div><img src="./mail.svg"/><p>odohugo@gmail.com</p></div>
-                </div>
-            </div>
-            <div class="contact-container content-pl hidden">
-                <h2>Kontakt</h2>
+            <div class="contact-container">
+                <h2 class="content-en">Contact</h2>
+                <h2 class="content-pl hidden">Contact</h2>
                 <div class="contact-links">
                     <a href="https://www.linkedin.com/in/hugo-janu%C3%A1rio-a194b318a/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain colored"></i><p>LinkedIn</p></a>
                     <a href="https://github.com/odohugo" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original colored"></i><p>GitHub</p></a>
@@ -187,27 +181,33 @@
     </div>
     <script>
         // Header buttons implementation
-        const homeBtn = document.querySelector(".home-scroll");
-        const workBtn = document.querySelector(".work-scroll");
-        const contactBtn = document.querySelector(".contact-scroll");
+        const homeBtn = document.querySelectorAll(".home-scroll");
+        const workBtn = document.querySelectorAll(".work-scroll");
+        const contactBtn = document.querySelectorAll(".contact-scroll");
         const workDiv = document.querySelector(".works-container");
         const contactDiv = document.querySelector(".contact-container");
 
-        homeBtn.addEventListener('click', () => {
-            window.scroll({
-                top: 0,
-                left: 0,
-                behavior: "smooth"
-            })
-        });
+        homeBtn.forEach(e => {
+            e.addEventListener('click', () => {
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth"
+                })
+            });
+        })
 
-        workBtn.addEventListener('click', () => {
-            workDiv.scrollIntoView({behavior: "smooth"})
-        });
+        workBtn.forEach(e => {
+            e.addEventListener('click', () => {
+                workDiv.scrollIntoView({behavior: "smooth"})
+            });
+        })
 
-        contactBtn.addEventListener('click', () => {
-            contactDiv.scrollIntoView({behavior: "smooth"})
-        });
+        contactBtn.forEach(e => {
+            e.addEventListener('click', () => {
+                contactDiv.scrollIntoView({behavior: "smooth"})
+            });
+        })
 
         // Language toggle implementation        
         const langEnBtn = document.querySelectorAll(".lang-en-btn");
