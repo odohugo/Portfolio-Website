@@ -195,6 +195,19 @@ a:visited {
 .contact-links p {
     font-weight: 600;
 }
+.lang-change {
+    position: absolute;
+    display: flex;
+    gap: .7rem;
+    right: 3%;
+    font-size: 18px;
+}
+.hidden {
+    display: none;
+}
+.lang-en-btn, .lang-pl-btn {
+    cursor: pointer;
+}
 
 @keyframes popin {
     from {

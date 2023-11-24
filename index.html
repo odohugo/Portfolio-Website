@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 <body>
-    <header>
+    <header class="content-en">
         <nav>
             <a class="nav-logo" href="/">
                 <img class="logo-img" src='./images/H-logo.png'>
@@ -19,18 +19,46 @@
                 <a class="work-scroll">Work</a>
                 <a class="contact-scroll">Contact</a>
             </div>
+            <div class="lang-change">
+                <p class="lang-en-btn"><u>EN</u></p>
+                <p class="lang-pl-btn">PL</p>
+            </div>
+        </nav>
+    </header>
+    <header class="content-pl hidden">
+        <nav>
+            <a class="nav-logo" href="/">
+                <img class="logo-img" src='./images/H-logo.png'>
+                <p class="logo-text">Hugo Januário</p>
+            </a>
+            <div class="nav-links">
+                <a class="home-scroll">Dom</a>
+                <a class="work-scroll">Praca</a>
+                <a class="contact-scroll">Kontakt</a>
+            </div>
+            <div class="lang-change">
+                <p class="lang-en-btn">EN</p>
+                <p class="lang-pl-btn"><u>PL</u></p>
+            </div>
         </nav>
     </header>
 
-    <div class="landing-container pop-in-animation">
+    <div class="landing-container pop-in-animation content-en">
         <h1>Hi &#128075 I am Hugo Januário </h1>
         <h3>A Full-stack Developer based in Szczecin, Poland.</h3>
         <img src="./images/laptop.svg" class="svg-laptop">
         <img src="./images/website.svg" class="svg-website">
         <img src="./images/app.svg" class="svg-app">
     </div>
+    <div class="landing-container pop-in-animation content-pl hidden">
+        <h1>Cześcz &#128075 Jestem Hugo Januário </h1>
+        <h3>Programista Full-stack based in Szczecin, Poland.</h3>
+        <img src="./images/laptop.svg" class="svg-laptop">
+        <img src="./images/website.svg" class="svg-website">
+        <img src="./images/app.svg" class="svg-app">
+    </div>
 
-    <div class="bio-container pop-in-animation">
+    <div class="bio-container pop-in-animation content-en">
         <p>I'm an enthusiastic and adaptable Full-stack Web Developer who's passionate 
             about building incredible websites and web applications. 
             I've been on a journey of coding, creating, and continuously improving digital 
@@ -38,6 +66,16 @@
             I'm here to turn your web development dreams into reality, whether it's a small business site, 
             a dynamic web app, or an e-commerce platform. Let's work together to create engaging, inspiring, 
             and results-driven digital experiences. Get in touch, and let's bring your vision to life!</p>
+    </div>
+    <div class="bio-container pop-in-animation content-pl hidden">
+        <p>Jestem entuzjastycznym i elastycznym programistą Full-stack, 
+            który pasjonuje się tworzeniem niesamowitych stron internetowych i 
+            aplikacji internetowych. Podążam ścieżką kodowania, tworzenia i ciągłego 
+            doskonalenia cyfrowych doświadczeń, które użytkownicy uwielbiają. <br><br>
+            Jestem tutaj aby zrealizować twoje marzenia dotyczące rozwoju stron internetowych, 
+            czy to mała witryna biznesowa, dynamiczna aplikacja internetowa czy platforma e-commerce. 
+            Pracujmy razem, aby stworzyć angażujące, inspirujące i oparte na wynikach cyfrowe doświadczenia. 
+            Skontaktuj się, a wspólnie ożywimy twoją wizję!</p>
     </div>
 
     <div class="skills-container pop-in-animation">
@@ -107,21 +145,38 @@
                     </div>
                 </div>
             </div>
-            <div class="works-container">
-                <h2>Client Work</h2>
-                <h4>Explore some of the projects I've had the privilege to work on.</h4>
+
+            <div class="works-container pop-in-animation">
+                <h2 class="content-en">Client Work</h2>
+                <h4 class="content-en">Explore some of the projects I've had the privilege to work on.</h4>
+                <h2 class="content-pl hidden">Pracy profesionalny or something</h2>
+                <h4 class="content-pl hidden">Explore some of the projects I've had the privilege to work on.</h4>
 
                 <div class="works-each">
                     <img src="./Agata-Lech-Website.png" class="lech-website-img" />
-                    <div>
+                    <div class="content-en">
                         <h4>Contemporary Artist's Website</h4>
+                        <p>Portfolio displaying Agata Lech's work as multidisciplinary artist.</p>
+                        <a href="http://agatalech.com/" target="_blank" rel="noopener noreferrer"><button class="visit-work-project">Visit</button></a>
+                    </div>
+                    <div class="content-pl hidden">
+                        <h4>Portal Artystów Współczesnych</h4>
                         <p>Portfolio displaying Agata Lech's work as multidisciplinary artist.</p>
                         <a href="http://agatalech.com/" target="_blank" rel="noopener noreferrer"><button class="visit-work-project">Visit</button></a>
                     </div>
                 </div>
             </div>
-            <div class="contact-container">
+
+            <div class="contact-container content-en">
                 <h2>Contact</h2>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/hugo-janu%C3%A1rio-a194b318a/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain colored"></i><p>LinkedIn</p></a>
+                    <a href="https://github.com/odohugo" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original colored"></i><p>GitHub</p></a>
+                    <div><img src="./mail.svg"/><p>odohugo@gmail.com</p></div>
+                </div>
+            </div>
+            <div class="contact-container content-pl hidden">
+                <h2>Kontakt</h2>
                 <div class="contact-links">
                     <a href="https://www.linkedin.com/in/hugo-janu%C3%A1rio-a194b318a/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain colored"></i><p>LinkedIn</p></a>
                     <a href="https://github.com/odohugo" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original colored"></i><p>GitHub</p></a>
@@ -131,13 +186,12 @@
         </div>
     </div>
     <script>
+        // Header buttons implementation
         const homeBtn = document.querySelector(".home-scroll");
         const workBtn = document.querySelector(".work-scroll");
         const contactBtn = document.querySelector(".contact-scroll");
-
         const workDiv = document.querySelector(".works-container");
         const contactDiv = document.querySelector(".contact-container");
-
 
         homeBtn.addEventListener('click', () => {
             window.scroll({
@@ -145,14 +199,52 @@
                 left: 0,
                 behavior: "smooth"
             })
-        })
+        });
 
         workBtn.addEventListener('click', () => {
             workDiv.scrollIntoView({behavior: "smooth"})
-        })
+        });
 
         contactBtn.addEventListener('click', () => {
             contactDiv.scrollIntoView({behavior: "smooth"})
+        });
+
+        // Language toggle implementation        
+        const langEnBtn = document.querySelectorAll(".lang-en-btn");
+        const langPlBtn = document.querySelectorAll(".lang-pl-btn");
+        const contentEn = document.querySelectorAll(".content-en");
+        const contentPl = document.querySelectorAll(".content-pl");
+
+        function toggleLanguage() {
+            contentEn.forEach(e => {
+                if (e.classList.contains('hidden')) {
+                    e.classList.remove('hidden')
+                } else {
+                    e.classList.add('hidden')
+                }
+            })
+            contentPl.forEach(e => {
+                if (e.classList.contains('hidden')) {
+                    e.classList.remove('hidden')
+                } else {
+                    e.classList.add('hidden')
+                }
+            })
+        }
+
+        langEnBtn.forEach(e => {
+            e.addEventListener('click', () => {
+                if (contentEn[0].classList.contains('hidden')){
+                    toggleLanguage()
+                }
+            })
+        })
+        langPlBtn.forEach(e => {
+            e.addEventListener('click', () => {
+                if(contentPl[0].classList.contains('hidden')){
+                    toggleLanguage()
+                }
+            })
         })
     </script>
 </body>
