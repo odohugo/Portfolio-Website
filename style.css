@@ -33,6 +33,7 @@ header {
     color: #393536;
     z-index: 10;
     box-shadow: 2px 0px 5px rgb(207, 207, 207);
+    user-select: none;
 }
 nav {
     display: flex;
@@ -135,7 +136,7 @@ a:visited {
     animation-duration: 1.5s;
 }
 .works-container {
-    margin-top: 8rem;
+    padding-top: 8rem;
     font-family: 'Cabinet', sans-serif;
 }
 .works-container h4 {
@@ -207,6 +208,11 @@ a:visited {
 }
 .lang-en-btn, .lang-pl-btn {
     cursor: pointer;
+    user-select: none;
+}
+.lang-en-btn:hover, .lang-pl-btn:hover {
+    scale: 1.1;
+    transition: .1s ease-in-out;
 }
 
 @keyframes popin {
@@ -254,6 +260,15 @@ a:visited {
 
     header {
         height: 5rem;
+    }
+    nav {
+        justify-content: left;
+        gap: 7%;
+    }
+    .lang-change {
+        top: 2rem;
+        right: 6%;
+        font-size: .9rem;
     }
     .logo-img {
         top: 1rem;
@@ -324,6 +339,12 @@ a:visited {
 
     header {
         padding: 0 5%;
+    }
+    nav {
+        font-size: 1rem;
+    }
+    .lang-change {
+        top: 1.1rem;
     }
     h1 {
         font-size: 2.5rem;
