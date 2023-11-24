@@ -206,7 +206,6 @@ a:visited {
 .hidden {
     display: none;
 }
-
 .lang-en-btn, .lang-pl-btn {
     cursor: pointer;
     user-select: none;
